@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# API de Cadastro de Desenvolvedores
 
-## Getting Started
+Esta é uma API simples construída com React, Next.js, TypeScript, Axios e TailwindCSS para gerenciar o cadastro de desenvolvedores com seus respectivos endpoints.
 
-First, run the development server:
+## Endpoints
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Listar Desenvolvedores
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+GET http://localhost:3333/developers
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Retorna uma lista de todos os desenvolvedores cadastrados.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Cadastrar Desenvolvedor
 
-## Learn More
+POST http://localhost:3333/developers
 
-To learn more about Next.js, take a look at the following resources:
+Permite cadastrar um novo desenvolvedor.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Atualizar Desenvolvedor
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+PUT http://localhost:3333/developers/:id
 
-## Deploy on Vercel
+Permite atualizar as informações de um desenvolvedor específico. Substitua `:id` pelo ID do desenvolvedor que deseja atualizar e envie um objeto JSON com os novos detalhes no corpo da requisição.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deletar Desenvolvedor
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+DELETE http://localhost:3333/developers/:id
+
+Permite excluir um desenvolvedor específico. Substitua `:id` pelo ID do desenvolvedor que deseja excluir.
+
+## Configuração do Ambiente
+
+1. Certifique-se de ter o Node.js instalado em sua máquina.
+2. Clone este repositório.
+3. Instale as dependências utilizando o comando `npm install`.
+4. Execute o servidor localmente com o comando `npm run dev`.
+
+Certifique-se de configurar corretamente o arquivo `.env` com as informações necessárias, como as variáveis de ambiente para conexão com o banco de dados, se aplicável.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Se você quiser melhorar esta API, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+
+
+
+
+
+
+
